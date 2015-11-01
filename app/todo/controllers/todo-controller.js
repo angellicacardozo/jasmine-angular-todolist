@@ -5,10 +5,14 @@
 		.controller('TodoController', TodoController);	
 
 	function TodoController($scope) {
-		$scope.list = [];
-		$scope.add = function(itemName) {
-			$scope.list.push(itemName);
-		};
+		var me= this;
+
+		me.list= [];
+		me.add= add;
+
+		function add(itemName) {
+			me.list.push(itemName);
+		}
 	};
 
 })();
