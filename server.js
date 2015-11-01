@@ -1,9 +1,8 @@
-var express = require('express');
-var app = express();
-
-app.use(express.static(__dirname));
+var http = require('http')
+    ,app = require('./config/express');
 
 var port = process.env.PORT || 3000;
 
-app.listen(port);
-console.log('Listening on ' + port);
+http.createServer(app).listen(3000, function() {
+    console.log('Servidor escutando na porta: ' + this.address().port);
+});
