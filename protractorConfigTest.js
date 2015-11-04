@@ -14,6 +14,8 @@ exports.config = {
   // protractor is called.
   specs: ['spec/e2e/**/*.js'],
 
+  baseUrl: 'http://localhost:3000',
+
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000
