@@ -1,1 +1,8 @@
-<p>Hello, todo list!</p>
+<div ng-controller="TodoController">
+	<ul ng-repeat="item in taskVm.list">
+		<li>{{ item }}</li>
+	</ul>
+
+	<input aria-label="Add item" ng-model="taskVm.model" type="text" />
+	<button ng-click="taskVm.add(taskVm.model)">Add item</button>
+</div>

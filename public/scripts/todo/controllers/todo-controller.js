@@ -7,18 +7,19 @@
 			$routeProvider.when('/', {
 				templateUrl: 'views/todo/main.html',
 				controller: 'TodoController',
-				controllerAs: 'bellhop'
+				controllerAs: 'taskVm'
 			});
 		});	
 
 	function TodoController($scope) {
-		var me= this;
+		var vm= this;
 
-		me.list= [];
-		me.add= add;
+		vm.list= ['Hello', 'Ola', 'Ça va'];
+		vm.add= add;
+		vm.model= '';
 
 		function add(itemName) {
-			me.list.push(itemName);
+			vm.list.push(itemName);
 		}
 	};
 

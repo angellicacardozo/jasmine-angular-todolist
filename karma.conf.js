@@ -26,6 +26,7 @@ module.exports = function(config) {
     // list of files to exclude
     exclude: [
         'public/scripts/lib/**/*.js',
+        'spec/e2e/**/*.js'
     ],
 
 
