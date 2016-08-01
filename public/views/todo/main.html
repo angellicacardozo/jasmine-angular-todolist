@@ -1,7 +1,7 @@
 <div ng-controller="TodoController">
 	<ul ng-repeat="item in taskVm.list">
 		<li>
-			<input type="checkbox" name="selection[]" ng-click="vm.toggleRemove(item)" /> <br />
+			<input type="checkbox" name="selection[]" ng-click="taskVm.toggleRemove(item)" /> <br />
 			{{ item }}
 		</li>
 	</ul>
